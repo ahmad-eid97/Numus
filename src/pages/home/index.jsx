@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <main>
       <Sidebar />
-
       <div className={cls.body}>
         <div className={cls.top}>
           <AllItems />

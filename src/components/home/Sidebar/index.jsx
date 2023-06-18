@@ -6,7 +6,6 @@ import Items from './Items';
 import cls from './sidebar.module.scss';
 
 const Sidebar = () => {
-
   return (
     <div className={cls.sidebar}>
       <div className={cls.top}>
@@ -18,7 +17,6 @@ const Sidebar = () => {
         </div>
         <Items />
       </div>
-
       <TotalData />
     </div>
   )
