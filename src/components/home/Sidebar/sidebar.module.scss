@@ -1,0 +1,43 @@
+@import '../../../styles/extends.scss';
+
+.sidebar {
+  width: 300px;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 13px 13px 20px #e6e6e6, -13px -13px 20px #e8e8e8 !important;
+
+  .top {
+    flex: 1;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      img {
+        width: 200px;
+        -webkit-filter: drop-shadow(5px 5px 5px #989898);
+        filter: drop-shadow(5px 5px 5px #989898);
+      }
+    }
+
+    .head {
+      background-color: var(--secondary-background);
+      padding: 20px;
+      margin-bottom: 20px;
+
+      h4 {
+        margin: 0;
+      }
+    }
+  }
+
+  @include md {
+    left: -350px;
+  }
+}

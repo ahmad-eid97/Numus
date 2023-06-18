@@ -1,0 +1,72 @@
+@import '../../../styles/extends.scss';
+@import '../../../styles/mixins.scss';
+
+.sessionForm {
+  padding: 30px 30px 50px;
+  border-radius: 5px;
+  @extend %shadow;
+
+  img {
+    width: 300px;
+    display: block;
+    margin: 0 auto 30px;
+    -webkit-filter: drop-shadow(5px 5px 5px #989898);
+    filter: drop-shadow(5px 5px 5px #989898);
+
+    @include xs {
+      width: 200px;
+    }
+
+  }
+
+  .field {
+    margin-bottom: 25px;
+    position: relative;
+
+    input {
+      @extend %input;
+
+      @include xs {
+        width: 90%;
+      }
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #e7e7e7 !important;
+      display: grid;
+      place-content: center;
+      position: absolute;
+      top: 2px;
+      right: -10px;
+      transform: rotate(45deg);
+      background-color: var(--main-background);
+      border: 2px solid var(--main-color);
+
+      i {
+        transform: rotate(-45deg)
+      }
+    }
+  }
+
+  button {
+    @extend %mainBtn;
+  }
+
+  p {
+    margin: 20px 0 0px 0;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include xs {
+    max-width: 80%;
+  }
+
+}

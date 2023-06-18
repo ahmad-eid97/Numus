@@ -1,0 +1,19 @@
+@import '../../styles/mixins.scss';
+
+.body {
+  margin-top: 20px;
+  margin-left: 320px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-height: 90vh;
+
+  .top {
+    flex: 1;
+  }
+
+  @include md {
+    margin-left: 0;
+  }
+}

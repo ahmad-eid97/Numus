@@ -1,0 +1,17 @@
+{
+  "name": "Numus",
+  "short_name": "Numus",
+  "icons": [
+    {
+      "src": "/images/pwa/icon-256x256.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#EF5256",
+  "background_color": "#f0edf1",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

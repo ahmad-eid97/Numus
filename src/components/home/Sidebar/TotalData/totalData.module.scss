@@ -1,0 +1,22 @@
+.totalData {
+  background-color: var(--secondary-background);
+  padding: 20px;
+  transform: translateY(-40px);
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h3 {
+    margin: 0;
+    text-align: center;
+
+    span {
+      display: block;
+      margin-top: 10px;
+      color: var(--main-color);
+    }
+  }
+}

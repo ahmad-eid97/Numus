@@ -1,0 +1,45 @@
+@import '../../../styles/extends.scss';
+@import '../../../styles/mixins.scss';
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+
+  .step {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    @extend %shadow;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    border: 2px solid var(--main-color);
+    font-size: 0.9rem;
+
+    &.active {
+      background-color: var(--main-color);
+      color: var(--text-inside);
+    }
+
+    @include xs {
+      width: 55px;
+      height: 55px;
+      font-size: 0.75rem;
+    }
+  }
+
+  .line {
+    border-top: 6px dashed #d6d6d6;
+    width: 200px;
+
+    &.active {
+      border-color: var(--main-color);
+    }
+
+    @include xs {
+      width: 100px;
+    }
+  }
+}

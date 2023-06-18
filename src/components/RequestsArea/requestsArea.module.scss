@@ -1,0 +1,67 @@
+@import '../../styles/extends.scss';
+@import '../../styles/mixins.scss';
+
+.requestsArea {
+  position: fixed;
+  width: 500px;
+  z-index: 9999;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: var(--main-background);
+  @extend %shadow;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+
+  .close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    @extend %insetShadow;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: none;
+
+    &:hover {
+      background-color: var(--main-color);
+      color: var(--text-inside);
+      @extend %shadow;
+    }
+
+  }
+
+  &.closed {
+    right: -500px;
+    z-index: -1;
+  }
+
+  .content {
+    padding: 80px 20px 20px;
+
+    .request {
+      border: 1px solid var(--border-color);
+      padding: 10px 20px;
+      border-radius: 10px;
+      border-right: 2px solid var(--main-color);
+      border-left: 2px solid var(--main-color);
+      margin-bottom: 10px;
+
+      p {
+        overflow: auto;
+      }
+    }
+  }
+
+  @include xs {
+    width: 300px;
+
+    &.closed {
+      right: -300px;
+      z-index: -1;
+    }
+  }
+}
